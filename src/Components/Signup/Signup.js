@@ -1,6 +1,6 @@
 import React,{useState} from "react";
 import './signUp.css';
-import { Modal } from "@mui/material";
+import Modal from "../Modal/modal";
 const Signup = () => {
 
   const [ForgotPassword, setForgotPassword] = useState(false);
@@ -8,6 +8,7 @@ const Signup = () => {
   const handleClose = ()=>{
     setForgotPassword(prev=>!prev);
   }
+
   return (
     
      <div className="w-full md:w-1/2 max-w-4xl">
@@ -79,19 +80,9 @@ const Signup = () => {
         <button
   type="button" // Changed from submit to button
   className="w-full py-3 mt-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition duration-300"
-  onClick={()=>handleClose()}>
- Forgot Password
-</button>
+  onClick={()=>handleClose()}>Forgot Password</button>
+      {ForgotPassword && <Modal handleClose={handleClose} content={<ForgotPassword />}/>}
       </form>
-
-      {/* Extra Links */}
-      {/* <p className="text-gray-400 text-md text-center mt-4 md:mt-5">
-        Already have an account?{" "}
-        <a href="/login" className="text-indigo-400 hover:underline">
-          Login
-        </a>
-      </p> */}
-    
     </div>
   </div>
    
@@ -99,3 +90,24 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   const ForgotPasswordcontent = () =>{
+//     return (
+//       <div>
+//         This content is coming from parent component
+//       </div>
+//     );
+//  }

@@ -2,7 +2,6 @@ import React from 'react'
 import '../../App.css';
 import Login from '../../Components/Login/Login';
 import Signup from '../../Components/Signup/Signup';
-import Modal from '../../Components/Modal/modal';
 
 const Home = () => {
   return (
@@ -23,9 +22,8 @@ const Home = () => {
   {/* Signup Section */}
  
     <Signup />
-    {ForgotPassword && <Modal handleClose={handleClose} />}
- 
-     </div>
+   
+    </div>
 </div>
     </div>
   )
