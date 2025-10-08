@@ -81,7 +81,7 @@ const Signup = () => {
   type="button" // Changed from submit to button
   className="w-full py-3 mt-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition duration-300"
   onClick={()=>handleClose()}>Forgot Password</button>
-      {ForgotPassword && <Modal handleClose={handleClose} content={<ForgotPassword />}/>}
+      {ForgotPassword && <Modal header="Forgot Password" handleClose={handleClose} content={<ForgotPassword />}/>}
       </form>
     </div>
   </div>
